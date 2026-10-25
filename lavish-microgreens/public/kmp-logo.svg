@@ -1,0 +1,54 @@
+<svg viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="kmpGoldBrand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FCEBB6" />
+      <stop offset="50%" stopColor="#D4AF37" />
+      <stop offset="100%" stopColor="#8C6B0D" />
+    </linearGradient>
+    <linearGradient id="kmpEmeraldBrand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#7BFFAD" />
+      <stop offset="60%" stopColor="#2CE67F" />
+      <stop offset="100%" stopColor="#0E582E" />
+    </linearGradient>
+    <linearGradient id="kmpLeafBrand" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#1B6F3E" />
+      <stop offset="100%" stopColor="#48EB8D" />
+    </linearGradient>
+    <radialGradient id="kmpBadgeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stopColor="rgba(44, 230, 127, 0.25)" />
+      <stop offset="100%" stopColor="rgba(10, 26, 17, 0)" />
+    </radialGradient>
+  </defs>
+
+  <!-- Emblem -->
+  <g transform="translate(10, 0)">
+    <circle cx="40" cy="40" r="38" fill="url(#kmpBadgeGlow)" />
+    <circle cx="40" cy="40" r="36" stroke="url(#kmpGoldBrand)" stroke-width="1.5" />
+    <circle cx="40" cy="40" r="32" stroke="rgba(212, 175, 55, 0.4)" stroke-width="0.75" stroke-dasharray="3 2" />
+
+    <!-- Sprout Leaves -->
+    <path
+      d="M 40 54 C 35 44 26 40 21 30 C 18 23 23 15 32 17 C 38 18 40 26 40 37"
+      fill="url(#kmpEmeraldBrand)"
+      stroke="url(#kmpGoldBrand)"
+      stroke-width="1"
+    />
+    <path
+      d="M 40 54 C 45 42 54 37 60 27 C 65 20 58 13 49 14 C 42 16 40 25 40 37"
+      fill="url(#kmpLeafBrand)"
+      stroke="url(#kmpGoldBrand)"
+      stroke-width="1"
+    />
+    <path d="M 40 62 C 40 52 39.5 43 40 37" stroke="url(#kmpGoldBrand)" stroke-width="2" stroke-linecap="round" />
+    <circle cx="40" cy="63" r="3" fill="url(#kmpGoldBrand)" />
+    <circle cx="27" cy="22" r="1.8" fill="#FFFFFF" />
+    <circle cx="54" cy="19" r="1.5" fill="#FFFFFF" />
+  </g>
+
+  <!-- Text -->
+  <g transform="translate(105, 0)">
+    <text x="0" y="38" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="700" fill="#FFFFFF" letter-spacing="1">KMP</text>
+    <text x="78" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#D4AF37" letter-spacing="3.5">MICROGREENS</text>
+    <text x="2" y="58" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2CE67F" letter-spacing="1.5" text-transform="uppercase">NATURE'S SMALL GREENS · BIG NUTRITION</text>
+  </g>
+</svg>
