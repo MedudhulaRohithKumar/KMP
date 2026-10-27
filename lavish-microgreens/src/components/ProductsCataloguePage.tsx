@@ -466,6 +466,10 @@ export default function ProductsCataloguePage() {
               </p>
             </div>
 
+            <div className="table-scroll-hint mono">
+              <span>👉 Swipe table horizontally to see all weight tiers & prices</span>
+            </div>
+
             <div className="glass price-table-container">
               <table className="kmp-price-table">
                 <thead>

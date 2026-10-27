@@ -95,11 +95,11 @@ export default function PotencyVisualizer() {
               aria-label="Nutrient density multiplier"
             />
             <div className="slider-ticks mono">
-              <span>1× (Standard Veg)</span>
+              <span>1× <span className="tick-detail">(Standard Veg)</span></span>
               <span>10×</span>
-              <span>20× (Superfood)</span>
+              <span>20× <span className="tick-detail">(Superfood)</span></span>
               <span>30×</span>
-              <span className="gold-tick">40× Peak Cotyledon</span>
+              <span className="gold-tick">40× <span className="tick-detail">Peak Cotyledon</span></span>
             </div>
           </div>
 

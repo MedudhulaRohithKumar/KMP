@@ -158,25 +158,121 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
           </div>
         </nav>
 
-        {/* Mobile Dropdown */}
+        {/* Mobile Dropdown Backdrop & Menu */}
         {mobileMenuOpen && (
-          <div className="glass mobile-dropdown">
-            <button type="button" onClick={() => navigateTo('home')} className="mobile-nav-link">
-              Home
-            </button>
-            <button type="button" onClick={() => navigateTo('catalogue')} className="mobile-nav-link mobile-nav-link--gold">
-              🌿 Products Catalogue (All 11 + Powder)
-            </button>
-            <button type="button" onClick={() => navigateTo('catalogue', 'subscriptions-section')} className="mobile-nav-link">
-              Subscription Plans (from ₹199)
-            </button>
-            <button type="button" onClick={() => navigateTo('catalogue', 'pricelist-section')} className="mobile-nav-link">
-              Complete Price List
-            </button>
-            <button type="button" onClick={() => navigateTo('home', 'sanctuary')} className="mobile-nav-link">
-              Bio-Sanctuary Cleanroom Tour
-            </button>
-          </div>
+          <>
+            <div
+              className="mobile-backdrop"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-hidden="true"
+            />
+            <div className="glass mobile-dropdown" role="dialog" aria-label="Mobile Navigation">
+              <button
+                type="button"
+                onClick={() => navigateTo('home')}
+                className={`mobile-nav-link ${currentPage === 'home' ? 'mobile-nav-link--active' : ''}`}
+              >
+                🏠 Home
+              </button>
+              <button
+                type="button"
+                onClick={() => navigateTo('catalogue')}
+                className={`mobile-nav-link mobile-nav-link--gold ${currentPage === 'catalogue' ? 'mobile-nav-link--active' : ''}`}
+              >
+                🌿 Products Catalogue (All 11 + Powder)
+              </button>
+
+              <div className="mobile-menu-divider" />
+
+              {currentPage === 'catalogue' ? (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMobileMenuOpen(false)
+                      scrollToId('fresh-greens')
+                    }}
+                    className="mobile-nav-link mobile-sublink"
+                  >
+                    🌱 Fresh Greens (11 Varieties)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMobileMenuOpen(false)
+                      scrollToId('powder-section')
+                    }}
+                    className="mobile-nav-link mobile-sublink"
+                  >
+                    ✨ Mix Powder Superfood
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMobileMenuOpen(false)
+                      scrollToId('subscriptions-section')
+                    }}
+                    className="mobile-nav-link mobile-sublink"
+                  >
+                    📦 Subscription Plans (from ₹199)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMobileMenuOpen(false)
+                      scrollToId('pricelist-section')
+                    }}
+                    className="mobile-nav-link mobile-sublink"
+                  >
+                    📊 Full Price Matrix Table
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMobileMenuOpen(false)
+                      scrollToId('revelation')
+                    }}
+                    className="mobile-nav-link mobile-sublink"
+                  >
+                    ⚡ The 40× Nutrient Revelation
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMobileMenuOpen(false)
+                      scrollToId('collection')
+                    }}
+                    className="mobile-nav-link mobile-sublink"
+                  >
+                    🌱 Living Harvest Collection
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMobileMenuOpen(false)
+                      scrollToId('elixir')
+                    }}
+                    className="mobile-nav-link mobile-sublink"
+                  >
+                    🧪 Cellular Elixir Lab
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMobileMenuOpen(false)
+                      scrollToId('sanctuary')
+                    }}
+                    className="mobile-nav-link mobile-sublink"
+                  >
+                    🔬 Bio-Sanctuary Cleanroom Tour
+                  </button>
+                </>
+              )}
+            </div>
+          </>
         )}
 
         {/* Floating Cart Drawer */}
